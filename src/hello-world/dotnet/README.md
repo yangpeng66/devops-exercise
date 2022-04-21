@@ -1,0 +1,5 @@
+## Usage
+
+```
+dotnet run
+```

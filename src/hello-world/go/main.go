@@ -7,7 +7,13 @@ import (
 
 func main() {
 	http.HandleFunc("/", HelloServer)
-	http.ListenAndServe(":8000", nil)
+
+	host := "localhost"
+	port := 8000
+
+	fmt.Printf("Server is running on http://%s:%v\n", host, port)
+
+	http.ListenAndServe(fmt.Sprintf(":%v", port), nil)
 }
 
 func HelloServer(w http.ResponseWriter, r *http.Request) {
