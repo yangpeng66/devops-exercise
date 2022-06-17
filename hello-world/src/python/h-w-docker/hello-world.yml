@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: hello-world-pod
+spec:
+   containers:
+   - name: hw-container01
+     image: outback860/hw-image:latest
+     ports:
+     - containerPort: 8000
